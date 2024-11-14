@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="modosVisualizacao">
+        <button class="ModoLuzEscuro" id="alterarDarkLight">
+            <i class='bx bx-sun'></i>
+        </button>
+    </nav>
+
+    <header class="header">
+        <div class="inicio_pagina">
+            <h1>Seja, Bem Vindo!</h1>
+            <h2>Qual seria o seu problema?</h2>
+        </div>
+
+        <div class="sugestoes">
+            <div class="sugestoes_item">
+                <p class="texto_sugestoes">Ajuda com problemas na impressora!</p>
+                <div class="icone_sugestoes">
+                    <i class='bx bx-wrench'></i>
+                </div>
+            </div>
+            <div class="sugestoes_item">
+                <p class="texto_sugestoes">O áudio do meu PC parou de funcionar e não consigo ouvir nada!</p>
+                <div class="icone_sugestoes">
+                    <i class='bx bx-wrench'></i>
+                </div>
+            </div>
+            <div class="sugestoes_item">
+                <p class="texto_sugestoes">Meu computador está travando frequentemente e não responde aos comandos!</p>
+                <div class="icone_sugestoes">
+                    <i class='bx bx-wrench'></i>
+                </div>
+            </div>
+            <div class="sugestoes_item">
+                <p class="texto_sugestoes">O teclado não está respondendo corretamente, algumas teclas não funcionam!</p>
+                <div class="icone_sugestoes">
+                    <i class='bx bx-wrench'></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="chats"></section>
+
+    <section class="chatbot">
+        <form action="#" class="chatbot__form" novalidate>
+            <div class="chatbot__texto">
+                <input type="text" placeholder="Digite sua pergunta" class="chatbot__enviar" required>
+                <button class="chatbot__botoes" id="botaoenviar">
+                    <i class='bx bx-send'></i>
+                </button>
+                <button class="chatbot__botoes" id="apagarbotao">
+                    <i class='bx bx-trash'></i>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

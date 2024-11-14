@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root {
+    --primary-color: #131314;
+    --secondary-color: #1E1F20;
+    --secondary-hover-color: #333537;
+    --focus-color: #282A2C;
+    --focus-hover-color: #37393B;
+    --button-hover-color: #2f3030;
+    --text-color: #fff;
+    --text-secondary-color: #D8D8D8;
+    --heading-secondary-color: #444746;
+    --placeholder-color: #ABAFB3;
+}
+
+.light_mode {
+    --primary-color: #FFFFFF;
+    --secondary-color: #F0F4F9;
+    --secondary-hover-color: #DDE3EA;
+    --focus-color: #E9EEF6;
+    --focus-hover-color: #E1E6ED;
+    --button-hover-color: #E9ECF1;
+    --text-color: #000;
+    --text-secondary-color: #4D4D4D;
+    --heading-secondary-color: #C4C7C5;
+    --placeholder-color: #717075;
+}
+
+body {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Navbar */
+.modosVisualizacao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.ModoLuzEscuro {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ModoLuzEscuro:hover {
+    background: var(--secondary-hover-color);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.inicio_pagina h1 {
+    font-size: 3.25rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #fff, #ffa500);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.inicio_pagina h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--heading-secondary-color);
+    margin-top: 1rem;
+}
+
+/* Sugestoes */
+.sugestoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sugestoes_item {
+    background: var(--secondary-color);
+    color: var(--text-secondary-color);
+    padding: 1rem;
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.sugestoes_item:hover {
+    background: var(--secondary-hover-color);
+}
+
+.texto_sugestoes {
+    font-weight: 500;
+    line-height: 1.375rem;
+}
+
+.icone_sugestoes {
+    text-align: center;
+}
+
+/* Chatbot */
+.chatbot {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    margin: auto; /* Centraliza o chatbot na tela */
+}
+.chatbot__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; /* Centraliza o conteúdo horizontalmente no form */
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Input de mensagem */
+.chatbot__texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%; /* Garante que o input ocupe o espaço disponível */
+}
+
+.chatbot__enviar {
+    flex: 1;
+    margin-top: auto;   
+    padding: 1rem;
+    background: var(--secondary-color);
+    border-radius: 0.75rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.chatbot__enviar:focus {
+    background: var(--focus-color);
+}
+
+/* Botões */
+.chatbot__botoes {
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    border-radius: 0.75rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chatbot__botoes:hover {
+    background: var(--button-hover-color);
+}
+
+/* Mensagens */
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    max-width: 90%;
+    width: auto;
+}
+
+.message--outgoing {
+    justify-content: flex-end;
+}
+
+.message__content {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message--incoming .message__content {
+    background-color: var(--secondary-hover-color);
+}
+
+.message--outgoing .message__content {
+    background-color: var(--focus-color);
+}
+
+.message__text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.message--loading .message__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message__loading-indicator {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.message__loading-bar {
+    width: 0.3rem;
+    height: 0.8rem;
+    background-color: var(--text-color);
+    animation: loading-bar 1s infinite alternate;
+}
+
+.message__loading-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.message__loading-bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading-bar {
+    from {
+        opacity: 0;
+        height: 0.8rem;
+    }
+
+    to {
+        opacity: 1;
+        height: 1rem;
+    }
+}
+
+.message__icon {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.message--error .message__content {
+    background-color: red;
+}
+
+.hide-header .header,
+.hide-header .sugestoes {
+    display: none;
+}
